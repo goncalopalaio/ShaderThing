@@ -8,6 +8,7 @@ LIBS := -lglfw3 -framework OpenGL -framework Cocoa -framework IOKit -framework C
 
 all: 
 	$(CC) $(CFLAGS) -o main main.c $(LIBS)
-
+slides:
+	$(CC) $(CFLAGS) -o main main_slides.c $(LIBS)
 clean:
 	@rm -rf $(OBJS) main

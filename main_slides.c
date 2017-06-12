@@ -40,9 +40,6 @@ int main(int argc, char const *argv[]) {
 
 	// Create window
     GLFWwindow* window;
-
-    // Set error callback early
-    glfwSetErrorCallback(glfw_error_callback);
     if(!glfwInit()) {
         printf("glfwInit Failed\n");
     } else {
@@ -69,7 +66,7 @@ int main(int argc, char const *argv[]) {
     glfwSetKeyCallback(window, glfw_key_callback);
     glfwSetMouseButtonCallback(window, glfw_mouse_button_callback);
     glfwSetCursorPosCallback(window, glfw_cursor_pos_callback);
-    
+    glfwSetErrorCallback(glfw_error_callback);
     
     printf("Setting context\n");
     glfwMakeContextCurrent(window);
