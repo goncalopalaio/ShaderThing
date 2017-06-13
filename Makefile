@@ -10,5 +10,7 @@ all:
 	$(CC) $(CFLAGS) -o main main.c $(LIBS)
 slides:
 	$(CC) $(CFLAGS) -o main main_slides.c $(LIBS)
+nuklear_example:
+	$(CC) $(CFLAGS) -o main main_nuklear_example.c $(LIBS)
 clean:
 	@rm -rf $(OBJS) main
